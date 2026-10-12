@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f1e8">
+  <meta name="description" content="Escolha seus lanches favoritos e peça pelo WhatsApp.">
+  <title>Brasa &amp; Pão — Cardápio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Brasa e Pão, início"><span class="brand-mark" aria-hidden="true">B<span>&amp;</span>P</span><span class="brand-name">brasa<span>&amp;</span>pão</span></a>
+    <nav class="top-nav" aria-label="Navegação principal"><a href="#cardapio">Cardápio</a><a href="#sobre">Nossa casa</a></nav>
+    <a class="bag-shortcut" href="#sacola" aria-label="Ir para a sacola"><span aria-hidden="true">▱</span><span class="bag-shortcut-label">Sacola</span><span class="bag-count" id="header-count">0</span></a>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="eyebrow"><span class="live-dot"></span> FEITO NA HORA, COM CARINHO</p><h1 id="hero-title">Seu próximo<br>favorito está <em>aqui.</em></h1><p class="hero-description">Pão quentinho, ingredientes de verdade e aquele capricho que faz toda a diferença.</p><a class="hero-cta" href="#cardapio">Explorar cardápio <span aria-hidden="true">↘</span></a><div class="hero-note"><span class="note-star">✳</span> Preparado fresquinho<br>depois do seu pedido</div></div>
+      <div class="hero-art" aria-label="Ilustração de um hambúrguer artesanal" role="img"><div class="art-sun"></div><div class="art-scribble">feito com<br>vontade!</div><div class="burger"><div class="burger-top"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="burger-cheese"></div><div class="burger-patty"></div><div class="burger-greens"></div><div class="burger-bottom"></div></div><div class="art-badge"><span>100%</span><small>artesanal</small></div><span class="art-spark spark-one">✳</span><span class="art-spark spark-two">✦</span><span class="art-spark spark-three">✳</span><div class="hero-caption">O clássico da casa<br><span>desde a primeira mordida</span></div></div>
+    </section>
+
+    <section class="menu-section" id="cardapio" aria-labelledby="menu-title">
+      <div class="section-heading"><div><p class="eyebrow">ESCOLHAS DA CASA</p><h2 id="menu-title">Cardápio <em>feito pra você.</em></h2></div><p class="section-aside">Bateu a fome? Escolha seus favoritos e<br>monte seu pedido do seu jeito.</p></div>
+      <div class="category-row" role="group" aria-label="Filtrar por categoria"><button class="category active" data-filter="todos" type="button">Tudo <span>06</span></button><button class="category" data-filter="hamburgueres" type="button">Hambúrgueres <span>03</span></button><button class="category" data-filter="acompanhamentos" type="button">Acompanhamentos <span>02</span></button><button class="category" data-filter="bebidas" type="button">Bebidas <span>01</span></button></div>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="closing-banner" id="sobre"><span class="banner-spark" aria-hidden="true">✳</span><div><p class="eyebrow">A FOME NÃO ESPERA</p><h2>Seu pedido, do seu jeito.</h2><p>Escolha, adicione à sacola e deixe o resto com a gente.</p></div><a href="#cardapio">Escolher meu pedido <span aria-hidden="true">↗</span></a></section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true">B<span>&amp;</span>P</span><span class="brand-name">brasa<span>&amp;</span>pão</span></a><span>Feito na hora. Feito com vontade. <span class="footer-heart">♥</span></span><span>© <span id="year"></span> Brasa &amp; Pão</span></footer>
+
+  <aside class="cart-panel" id="sacola" aria-labelledby="cart-title"><div class="cart-heading"><div><p class="eyebrow">SEU PEDIDO</p><h2 id="cart-title">Sua sacola <span id="cart-count">(0)</span></h2></div><button class="cart-close" id="close-cart" type="button" aria-label="Fechar sacola">×</button></div><div class="cart-items" id="cart-items"><div class="cart-empty"><span aria-hidden="true">▱</span><p>Sua sacola está esperando<br>por algo gostoso.</p><a href="#cardapio" id="browse-menu">Explorar cardápio ↗</a></div></div><div class="cart-bottom"><div class="cart-total"><span>Total</span><strong id="cart-total">R$ 0,00</strong></div><button class="checkout-button" id="checkout" type="button" disabled>Finalizar pedido <span aria-hidden="true">↗</span></button><p class="checkout-note">Você continuará seu pedido pelo WhatsApp.</p></div></aside>
+  <div class="scrim" id="scrim"></div>
+  <button class="floating-cart" id="floating-cart" type="button" aria-label="Abrir sacola"><span aria-hidden="true">▱</span><span>Minha sacola</span><span class="floating-count" id="floating-count">0</span></button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
